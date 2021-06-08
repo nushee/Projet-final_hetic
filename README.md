@@ -25,4 +25,8 @@ https://docs.google.com/document/d/1TdfMXIZtOUwnGTRMoUtiYfA6dJzdD1WbBeGBh16pxrM/
 
 https://docs.google.com/spreadsheets/d/1VBsHvZkb12HmGXJ0qnPMLxyRNEPZjAQQPhccuQ_PWR0/edit#gid=0
 
+## Notre journal de suivi
+
+https://docs.google.com/document/d/1sF0goarw2SNDegmhorMkiNxqHZradPgfBSTi0D2S9Rk/edit
+
 # Bonne journée !
