@@ -6,7 +6,7 @@
   - Doriane Farau
   - Séverine Bourin
   - Ibrahim Soma
-  - Adbulah Ouahabi
+  - Abdulah Ouahabi
 
 ## Le projet
 
