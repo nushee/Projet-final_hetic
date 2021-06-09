@@ -4,24 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/General.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h1>Évolution du nombre de joueurs dans LoL</h1>
-        <canvas id="graph1"></canvas>
-        <canvas id="graph2"></canvas>
-        <canvas id="graph3"></canvas>
-    </div>
-    <div>
-        <h1>Répartition des joueurs dans le monde</h1>
-        <img src="img/world.svg" alt="image carte du monde">
-    </div>
-    <div>
-        <h1>Tranche d’âge et genre de la communauté</h1>
-    </div>
+    <header>
+        <div>
+            <p><a href="index.html">Général</a></p>
+            <p><a href="page2.html">Suivi par an</a></p>
+        </div>
+    </header>
+    <main>
+        <h1>Pourquoi le succès du jeu League of Legends a ralentit? Comment reconquérir les joueurs?</h1>
+        <div>
+            <h2>Évolution du nombre de joueurs dans LoL</h2>
+            <canvas id="graph1"></canvas>
+            <canvas id="graph2"></canvas>
+            <canvas id="graph3"></canvas>
+        </div>
+        <div>
+            <h2>Répartition des joueurs dans le monde</h2>
+            <img class="map" src="img/world.svg" alt="image carte du monde">
+        </div>
+        <div>
+            <h2>Tranche d’âge et genre de la communauté</h2>
+        </div>
+    </main>
+    <footer>
+        <div class="bande"></div>
+        <div class="footer">
+            <section>
+                <h3>Notre équipe</h3>
+                <p>Thomas Latour - Design / Front End / Data</p>
+                <p>Doriane Farau - Design / Front End / Data</p>
+                <p>Julie Cesana - Design / Front End / Gestion de Projet</p>
+                <p>Séverine Bourin - Design / Data / Gestion de Projet </p>
+                <p>Ibrahim Soma - Front End / Back End / Data </p>
+                <p>Abdulah Ouahabi - Back End / Front End</p>
+            </section>
+            <section>
+                <h3>Projet Scolaire</h3>
+                <h3>Hetic 2021</h3>
+            </section>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
