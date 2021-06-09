@@ -34,7 +34,7 @@
 	<head>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
-		<title>Accelerometer data</title>
+		<title>Évolution de LoL</title>
 	</head>
 
 	<body>	   
