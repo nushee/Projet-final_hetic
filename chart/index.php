@@ -37,15 +37,17 @@
 		<title>Évolution de LoL</title>
 	</head>
 
-	<body>	   
-	    <div class="container">	
-	    <h1>Evolution de League of Legends</h1>       
-            <canvas id="chart" style="width: 100%; height: 65vh; background: #222; border: 1px solid #555652; margin-top: 10px;"></canvas>
-            
-         </div>
+	<body>
+		<h1>Pourquoi le succès du jeu League of Légende a ralentit? Comment ont-ils finalement reconquis les joueurs?</h1>
+		<div class="container">	
+	    		<h1>Évolution des joueurs et des moyens mis en place</h1>       
+            		<canvas id="chart" style="width: 100%; height: 65vh; background: #222; border: 1px solid #555652; margin-top: 10px;"></canvas>
+            	</div>
+		
 	    <script>
             var ctx = document.getElementById('chart').getContext('2d');
             new Chart(ctx, {
+		responsive: true,
                 type: 'line',
                 data: {
                     labels:[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],
@@ -80,39 +82,34 @@
                     }]
                 },
                 options: {
-                    tooltips: {
-                    mode: 'nearest'
-                    },
-                    scales: {
-                    yAxes: [{
-                        id: 'A',
-                        type: 'linear',
-                        position: 'left',
-                        ticks: {
-                        fontColor: '#ffbaa2',
-                        }
-                    }, {
-                        id: 'B',
-                        type: 'linear',
-                        position: 'right',
-                        ticks: {
-                        fontColor: '#91cf96',
-                        }
-                    }, {
-                        id: 'C',
-                        type: 'linear',
-                        position: 'right',
-                        ticks: {
-                        fontColor: '#c881d2',
-                        }
-                    }]
-                    },
-                    point: {
-                        radius: 5,
-                        borderWidth: 2,
-                        pointStyle: 'circle'
-                    }
-                }
+		    scales: {
+			C: {
+			    type: 'linear',
+			    display: true,
+			    position: 'left',
+			},
+			B: {
+			    type: 'linear',
+			    display: true,
+			    position: 'left',
+			},
+			A: {
+			    type: 'linear',
+			    display: true,
+			    position: 'left',
+			},
+			D: {
+			    type: 'linear',
+			    display: true,
+			    position: 'right',
+			},
+			E: {
+			    type: 'linear',
+			    display: true,
+			    position: 'right',
+			},
+		    },
+		}
             });
         </script>
     </body>
