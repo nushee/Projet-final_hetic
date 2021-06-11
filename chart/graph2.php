@@ -28,16 +28,16 @@
 <html>
 	<head>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-		<title>Accelerometer data</title>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+		<title>Evolution de League of Legends</title>
 		<style type="text/css">			
 			body{
 				font-family: Arial;
-			    margin: 80px 100px 10px 100px;
-			    padding: 0;
-			    color: white;
-			    text-align: center;
-			    background: #555652;
+			    	margin: 80px 100px 10px 100px;
+			    	padding: 0;
+			    	color: white;
+			    	text-align: center;
+			    	background: #555652;
 			}
 
 			.container {
@@ -51,33 +51,34 @@
 	</head>
 
 	<body>
-	    <div class="container">	
-	    <h1>Evolution de League of Legends</h1>       
+		<h1>Pourquoi le succès du jeu League of Légende a ralentit? Comment ont-ils finalement reconquis les joueurs?</h1>
+		<div class="container">	
+			<h3>Répartition des joueurs dans le monde</h3>
+		</div>
+	    	<div class="container">	
+	    	<h1>Tranche d'âge de la communauté</h1>       
 			<canvas id="chart" style="width: 100%; height: 65vh; background: yellow; border: 1px solid #555652; margin-top: 10px;"></canvas>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js">
-			</script>
-			<script>
+		</div>
+		
+		<script>
+			var ctx = document.getElementById("chart").getContext('2d');
+			var myChart = new Chart(ctx, {
+			type: 'radar',
+			data: {
+			    labels: [<?php echo $data1; ?>],
+			    datasets: 
+			    [{
+				label: 'Pourcentage de Personne jouant a LOL',
+				data: [<?php echo $data2; ?>],
+				backgroundColor: 'rgba(0,130,255)',
+				borderWidth: 3	
+			    },]
+			},
 
-				var ctx = document.getElementById("chart").getContext('2d');
-    			var myChart = new Chart(ctx, {
-        		type: 'radar',
-		        data: {
-		            labels: [<?php echo $data1; ?>],
-		            datasets: 
-		            [{
-		            	label: 'Pourcentage de Personne jouant a LOL',
-		                data: [<?php echo $data2; ?>],
-		                backgroundColor: 'rgba(0,130,255)',
-		                borderWidth: 3	
-		            },]
-		        },
-		     
-		        options: {
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 50}}
-		        }
+			options: {
+			    legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 50}}
+			}
 		    });
-			</script>
-	    </div>
-	    
+		</script>
 	</body>
 </html>
