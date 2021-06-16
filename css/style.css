@@ -1,0 +1,464 @@
+/* ----------- global -------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Friz-Quadrata';
+	src: url('../font/Friz-Quadrata.woff') format('woff');
+}
+@font-face {
+	font-family: 'Friz-Quadrata-Bold';
+	src: url('../font/Friz-Quadrata-Bold.woff') format('woff');
+}
+body{
+    background-color: #0F171D;
+}
+
+/* ----------- graphiques -------------*/
+.container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+canvas {
+    margin-bottom: 80px;
+}
+
+/* ----------- titres et paragraphe -------------*/
+h1 {
+    font-size: 35px;
+    padding: 50px 0 70px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    font-family: 'Friz-Quadrata-Bold';
+  }
+h1 a {
+    color: #E1CE90;
+    text-decoration: none;
+}
+ .titre {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Friz-Quadrata';
+    padding-bottom: 20px;
+}
+#text {
+    width: 85%;
+    margin: 0 auto;
+}
+p {
+    color: white;
+    text-align: center;
+    font-size:15px;
+    margin: 50px auto 70px;
+}
+/* ----------- bouton -------------*/
+/* ---- info  ----*/
+#info {
+    position :fixed;
+    margin: 15px;
+    font-family: 'Friz-Quadrata';
+}
+#info img {
+    width: 5px;
+}
+.carte_button {
+    border-radius:25px;
+    position :absolute;
+    z-index: 1;
+    background-color: #E1CE90;
+    cursor: pointer;
+    border: none;
+    height:30px;
+    width:30px;
+}
+#info button:hover {
+    transition:0.3s;
+    animation: glow 1s infinite ;
+}
+.carte {
+    border-radius: 10px;
+    position :absolute;
+    background-color: #E1CE90;
+    height: 0%;
+    width: 0%;
+    margin: 22px 30px;
+    display: none;
+}
+
+.carte_button:hover + .carte{
+    height: 125px;
+    width: 290px;
+    display: block;
+}
+#hide {
+    font-size: 11px;
+    text-align: center;
+    width: 220px;
+    color: #0F171D;
+    margin: 12px auto;
+}
+/* ---- menu  ----*/
+#button {
+    display: flex;
+    width: 210px;
+    justify-content: space-between;
+    margin: 0 auto 70px;
+}
+button img {
+    width: 15px;
+}  
+#neonShadow{
+    height:40px;
+    width:40px;
+    border:none;
+    border-radius:25px;
+    transition:0.3s;
+    background-color: #E1CE90;
+    animation: glow 1s infinite ;
+    cursor: pointer;
+
+}
+#neonShadow:hover{
+    transform:translateX(-20px)rotate(30deg);
+    border-radius:50px;
+    background-color: #E1CE90;
+}
+
+/* ----------- keyframes -------------*/
+@keyframes glow{
+  0%{
+  box-shadow: 1px 1px 10px rgb(16, 138, 180), -1px -1px 10px rgb(16, 138, 180);
+  }
+  50%{
+  box-shadow: 1px 1px 10px rgb(110, 236, 246),-1px -1px 10px rgb(110, 236, 246);
+  }
+  100%{
+  box-shadow: 1px 1px 10px rgb(16, 138, 180), -1px -1px 10px rgb(16, 138, 180);
+  }
+}
+
+/* ----------- footer -------------*/
+hr {
+    width: 85%;
+    margin: 0 auto;
+    border-color: #108AB4;
+    margin-bottom: 15px;
+    transition:0.3s;
+    animation: glow 1s infinite ;
+}  
+footer {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px;
+    font-family: 'Friz-Quadrata';
+}
+#footer_title {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+footer ul {
+    font-size: 8px;
+    list-style: none;
+}
+footer ul li{
+    margin-top: 5px;
+}
+#right h3 {
+    font-size: 12px;
+    width: 66px;
+    text-align: right;   
+}
+#right {
+    margin: auto 0;
+}
+
+/* ----------- responsive  -------------*/
+/* ---- mobile  ----*/
+
+@media screen and (min-width: 390px) and (max-width: 520px) {
+    footer {
+        margin: 20px 60px;
+    }
+}
+@media screen and (min-width: 445px) and (max-width: 520px) {
+    #footer_title {
+    font-size: 14px;
+    }
+    footer ul {
+        font-size: 10px;
+    }
+    #right h3 {
+    font-size: 14px;
+    width: 66px;
+    }
+}
+/* ---- tablette  ----*/
+@media screen and (min-width: 520px) and (max-width: 720px) {
+    #info {
+    margin: 15px;
+    }
+    #info img {
+    width: 7px;
+    }
+    .carte_button {
+    height:35px;
+    width:35px;
+    }
+    .carte {
+    margin: 24px 40px;
+    }
+    .carte_button:hover + .carte{
+    height: 190px;
+    width: 380px;
+    }
+    #hide {
+    font-size: 15px;
+    width: 315px;
+    margin: 32px auto;
+    }
+    h1 {
+    font-size: 60px;
+    width: 70%;
+    }
+    #neonShadow {
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+    }
+    button img {
+        width: 20px;
+    }
+    #button {
+        width: 280px;
+    }
+    .titre {
+    font-size: 22px;
+    }
+    p {
+        font-size: 16px;
+    }
+    #text {
+        width: 70%;
+    }
+    .container {
+        width: 75%;
+    }
+     footer {
+        margin: 30px 80px;
+    }
+    #footer_title {
+    font-size: 16px;
+    }
+    footer ul {
+        font-size: 11px;
+    }
+    #right h3 {
+    font-size: 16px;
+    width: 75px;
+    }
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    #info {
+    margin: 25px;
+    }
+    #info img {
+    width: 10px;
+    }
+    .carte_button {
+    height:40px;
+    width:40px;
+    }
+    .carte {
+    margin: 30px 40px;
+    }
+    .carte_button:hover + .carte{
+    height: 205px;
+    width: 410px;
+    }
+    #hide {
+    font-size: 16px;
+    width: 320px;
+    margin: 36px auto;
+    }
+    h1 {
+    font-size: 72px;
+    width: 70%;
+    }
+    #neonShadow {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+    }
+    button img {
+        width: 25px;
+    }
+    #button {
+            width: 300px;
+    }
+    .titre {
+    font-size: 25px;
+    }
+    p {
+        font-size: 18px;
+    }
+    #text {
+        width: 70%;
+    }
+    .container {
+        width: 50%;
+    }
+    footer {
+        margin: 40px 120px;
+    }
+    #footer_title {
+    font-size: 16px;
+    }
+    footer ul {
+        font-size: 12px;
+    }
+    #right h3 {
+    font-size: 16px;
+    width: 75px;
+    }
+}
+/* ---- laptop  ----*/
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+    #info {
+    margin: 40px;
+    }
+    #info img {
+    width: 10px;
+    }
+    .carte_button {
+    height:40px;
+    width:40px;
+    }
+    .carte {
+    margin: 35px 45px;
+    }
+    .carte_button:hover + .carte{
+    height: 230px;
+    width: 530px;
+    }
+    #hide {
+    font-size: 20px;
+    width: 440px;
+    margin: 43px auto;
+    }
+    h1 {
+    font-size: 85px;
+    width: 80%;
+    }
+    .titre {
+    font-size: 30px;
+    }
+    #neonShadow {
+        width: 60px;
+        height: 60px;
+        border-radius: 35px;
+    }
+    button img {
+        width: 30px;
+    }
+    #button {
+        width: 310px;
+    }
+    p {
+        font-size: 20px;
+    }
+    #text {
+        width: 80%;
+    }
+    .container {
+        width: 50%;
+    }
+    footer {
+        margin: 50px 225px;
+    }
+    #footer_title {
+    font-size: 16px;
+    }
+    footer ul {
+        font-size: 12px;
+    }
+    #right h3 {
+    font-size: 16px;
+    width: 135px;
+    }
+}
+@media screen and (min-width: 1270px) {
+    hr {
+           width: 75%;
+    }
+}
+/* ---- desktop  ----*/
+@media screen and (min-width: 1600px) {
+    #info {
+    margin: 50px;
+    }
+    #info img {
+    width: 12px;
+    }
+    .carte_button {
+    height:45px;
+    width:45px;
+    }
+    .carte {
+    margin: 35px 45px;
+    }
+    .carte_button:hover + .carte{
+    height: 230px;
+    width: 550px;
+    }
+    #hide {
+    font-size: 20px;
+    width: 440px;
+    margin: 43px auto;
+    }
+    h1 {
+    font-size: 85px;
+    width: 80%;
+    }
+    .titre {
+    font-size: 30px;
+    }
+    #neonShadow {
+        width: 60px;
+        height: 60px;
+        border-radius: 35px;
+    }
+    button img {
+        width: 30px;
+    }
+    #button {
+        width: 310px;
+    }
+    p {
+        font-size: 20px;
+    }
+    #text {
+        width: 80%;
+    }
+    .container {
+        width: 40%;
+    }
+    footer {
+        margin: 50px 295px;
+    }
+    #footer_title {
+    font-size: 25px;
+    }
+    footer ul {
+        font-size: 15px;
+    }
+    #right h3 {
+    font-size: 25px;
+    width: 235px;
+    }
+}
