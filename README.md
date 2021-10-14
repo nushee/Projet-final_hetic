@@ -1,4 +1,4 @@
-# Projet-final_hetic équipe 5
+# Projet-final_hetic Dataviz équipe 5
 
 ## Notre site
 
